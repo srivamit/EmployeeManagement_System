@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <form id="employee-form">
+            <input type="text" placeholder="First Name" required id="first_name">
+            <input type="text" placeholder="Last Name" required id="last_name">
+            <input type="email" placeholder="Email" required id="email">
+            <input type="text" placeholder="Phone" required id="phone">
+            <input type="text" placeholder="Position" required id="position">
+            <input type="text" placeholder="Department" required id="department">
+            <input type="number" placeholder="Salary" required id="salary">
+            <input type="date" required id="hire_date">
+            <button type="submit">Add Employee</button>
+        </form>
+        
+        <input type="text" placeholder="Search Employee" id="search">
+        
+        <select id="sort-options">
+            <option value="">Sort By</option>
+            <option value="first_name">First Name</option>
+            <option value="last_name">Last Name</option>
+            <option value="salary">Salary</option>
+            <option value="hire_date">Hire Date</option>
+        </select>
+        <button id="export-csv">Export as CSV</button>
+        <button id="export-pdf">Export as PDF</button>
+
+        <table id="employee-list">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <canvas id="performance-chart" width="400" height="200"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
